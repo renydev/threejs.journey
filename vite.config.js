@@ -1,9 +1,9 @@
-const isCodeSandbox = !!process.env.SANDBOX_URL
+const isCodeSandbox = 'SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env
 
 export default {
-    root: "src/",
-    publicDir: "../static/",
-    base: "./",
+    root: 'src/',
+    publicDir: '../static/',
+    base: './',
     server:
     {
         host: true,
@@ -11,7 +11,7 @@ export default {
     },
     build:
     {
-        outDir: "../dist",
+        outDir: '../dist',
         emptyOutDir: true,
         sourcemap: true
     }
